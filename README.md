@@ -4,3 +4,5 @@ Damola Oladeji Android Beginner
 Benjamin Anyigor (BEN10)
 ifeanyi Madu (android beginner)
 Ekenedilichukwu Ene-Otogbolu
+"alc-edo" 
+Olaiya Victor
