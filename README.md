@@ -1,2 +1,1 @@
-"alc-edo" 
 "Osagie Eloghosa"
