@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php session_start();
+
+?><!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -10,16 +12,18 @@
   </head>
   <body>
     <h1>Sign in</h1>
-    <form>
+    <form action="login/" method="post">
+    <?php if($_SESSION["msg"]){?>
+    <div class="alert alert-danger"><?php echo @$_SESSION["msg"]; ?></div><?php }?>
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>        
+          <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -28,3 +32,4 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   </body>
 </html>
+<?php $_SESSION["msg"]=""; ?>
